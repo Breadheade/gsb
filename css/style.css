@@ -1,0 +1,183 @@
+/* ----- Police élégante ----- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* ----- Fond général ----- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* ----- Logo GSB ----- */
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: appear 1.5s ease-in-out forwards;
+}
+
+.logo-gsb {
+    width: 180px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: logo-appear 2s forwards ease-in-out;
+}
+
+@keyframes logo-appear {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ----- Titres ----- */
+h1, h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* ----- Formulaires ----- */
+form {
+    background-color: #1e1e1e;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    max-width: 400px;
+    width: 90%;
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+    color: #f1f1f1;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #2a2a2a;
+    color: #f1f1f1;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* ----- Boutons ----- */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* ----- Liens ----- */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ----- Messages ----- */
+p {
+    text-align: center;
+}
+
+p[style*="color:red"] {
+    background-color: #b22222;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+p[style*="color:green"] {
+    background-color: #228b22;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 500px) {
+    form {
+        padding: 20px;
+    }
+}
+
+.bouton-retour, .bouton-deconnexion {
+    width: auto !important; /* annule le width 100% global */
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+}
+
+.bouton-retour {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.bouton-retour:hover {
+    background-color: #45a049;
+}
+
+.bouton-deconnexion {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.bouton-deconnexion:hover {
+    background-color: #c0392b;
+}
+
+
+
+
+.message-success {
+    background-color: #228b22;
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
